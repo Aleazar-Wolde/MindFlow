@@ -8,4 +8,6 @@ public class userService {
     User registerUser(User user);
 
     Optional<User> getUserByEmail(String email);
+
+    boolean authenticateUser(String email, String password);
 }
