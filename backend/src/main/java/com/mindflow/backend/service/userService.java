@@ -1,7 +1,7 @@
 package com.mindflow.backend.service;
 
 import org.apache.catalina.User;
-
+import com.mindflow.backend.domain.User;
 import java.util.Optional;
 
 public class userService {
