@@ -7,12 +7,14 @@ import org.hibernate.validator.constraints.UUID;
 @Entity //  An entity annotation creates a table in the DataBase for Us. JPA
 @Table (name ="users") //The table annotation gives us the choice to change the table name that is created in the Db.
 public class User {
+
+    private String name;
     @Id
     @GeneratedValue
     private UUID id;
-    private String name;
     @Column(unique = true, nullable = false)
     private String email;
+
     private String password;
 
     public User(String name, UUID id, String email, String password){
