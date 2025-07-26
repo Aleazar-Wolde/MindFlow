@@ -23,8 +23,6 @@ public class User {
         this.password = password;
     }
 
-    // Getters and Setters
-
     //Getter and setter for the User filed.
     public String getName(){
         return name;
