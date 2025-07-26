@@ -5,7 +5,9 @@ import com.mindflow.backend.domain.User;
 import java.util.Optional;
 
 public class userService {
-    User registerUser(User user);
+    User registerUser(User user) {
+        return null;
+    }
 
     Optional<User> getUserByEmail(String email);
 
