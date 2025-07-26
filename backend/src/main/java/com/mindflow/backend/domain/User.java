@@ -3,7 +3,6 @@ package com.mindflow.backend.domain;
 import jakarta.persistence.*;
 import org.hibernate.validator.constraints.UUID;
 
-
 @Entity //  An entity annotation creates a table in the DataBase for Us. JPA
 @Table (name ="users") //The table annotation gives us the choice to change the table name that is created in the Db.
 public class User {
