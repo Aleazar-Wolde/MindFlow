@@ -9,7 +9,9 @@ public class userService {
         return null;
     }
 
-    Optional<User> getUserByEmail(String email);
+    Optional<User> getUserByEmail(String email) {
+        return null;
+    }
 
     boolean authenticateUser(String email, String password);
 }
