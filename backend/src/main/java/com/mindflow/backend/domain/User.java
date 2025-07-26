@@ -14,7 +14,6 @@ public class User {
     private UUID id;
     @Column(unique = true, nullable = false)
     private String email;
-
     private String password;
 
     public User(String name, UUID id, String email, String password){
