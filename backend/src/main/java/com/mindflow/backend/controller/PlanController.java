@@ -22,12 +22,15 @@
 // * }
 // */
 //    @GetMapping("/today")
-//    public ResponseEntity<Map<String, Object>> getTodayPlan(){
-//        Map<String, Object> payload = Map.of(
-//                "top_today", List.of(),
-//                "later", List.of(),
-//                "ai_notes", List.of("Map stub - replace me")
-//        );
-//        return ResponseEntity.ok(payload);
+//    public String hello() {
+//        return "Hello, MindFlow!";
 //    }
+////    public ResponseEntity<Map<String, Object>> getTodayPlan(){
+////        Map<String, Object> payload = Map.of(
+////                "top_today", List.of(),
+////                "later", List.of(),
+////                "ai_notes", List.of("Map stub - replace me")
+////        );
+////        return ResponseEntity.ok(payload);
+////    }
 //}
