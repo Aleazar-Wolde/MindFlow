@@ -1,8 +1,7 @@
 package com.mindflow.backend.domain;
 
 import jakarta.persistence.*;
-import org.apache.catalina.User;
-
+import com.mindflow.backend.domain.User;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.util.UUID;
