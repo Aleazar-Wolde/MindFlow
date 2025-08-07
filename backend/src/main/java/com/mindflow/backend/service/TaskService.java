@@ -8,10 +8,10 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
-public class TaskSerivce implements TaskRepository {
+public class TaskSerivice implements TaskRepository {
     private final TaskRepository taskRepository;
 
-    public TaskSerivce(TaskRepository taskRepository){
+    public TaskSerivice(TaskRepository taskRepository){
         this.taskRepository = taskRepository;
     }
 
@@ -37,7 +37,7 @@ public class TaskSerivce implements TaskRepository {
         return taskRepository.save(task);
     }
 
-    public void deletTask(UUID id){
+    public void deleteTask(UUID id){
         taskRepository.deleteById(id);
     }
 }
