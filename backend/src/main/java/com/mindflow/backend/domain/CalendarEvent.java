@@ -1,4 +1,4 @@
-package com.mindflow.backend.domain;
-
-public class CalendarEvent {
-}
+//package com.mindflow.backend.domain;
+//
+//public class CalendarEvent {
+//}
