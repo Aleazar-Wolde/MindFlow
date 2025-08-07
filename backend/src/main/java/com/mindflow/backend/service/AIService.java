@@ -1,4 +1,4 @@
-package com.mindflow.backend.service;
-
-public class AIService {
-}
+//package com.mindflow.backend.service;
+//
+//public class AIService {
+//}
