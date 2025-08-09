@@ -58,35 +58,7 @@ mindflow/
 │ ├── pages/ # App pages (Dashboard, Login, etc.)
 │ ├── components/ # Reusable UI components
 │ └── services/ # API calls
-
-
 ---
-
-## 🏗 Current Progress
-- **Backend:** User entity + repository created, starting service & controller
-- **Frontend:** Basic login, register, and dashboard pages set up with routing
-- **Next Step:** Connect backend API to frontend dashboard
-
----
-
-## 📌 Learning Goals
-1. Master **Spring Boot backend development**
-2. Understand **JPA & database relationships**
-3. Build and consume **REST APIs**
-4. Improve **React + TypeScript frontend skills**
-5. Integrate **AI features** for smarter productivity
-
----
-
-## 📅 Roadmap
-- [ ] Complete backend CRUD operations for tasks & reflections
-- [ ] Connect frontend to backend
-- [ ] Improve dashboard UI/UX
-- [ ] Add AI task suggestion feature
-- [ ] Deploy to cloud (AWS / Render)
-
----
-
 ## 📄 License
 This project is licensed under the MIT License.
 
