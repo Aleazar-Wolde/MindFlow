@@ -1,6 +1,7 @@
 // tailwind.config.cjs
 module.exports = {
-  // …content, plugins…
+  darkMode: 'class', // ← TOP-LEVEL (not inside theme)
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -19,4 +20,6 @@ module.exports = {
       },
     },
   },
-}
+  plugins: [],
+};
+
