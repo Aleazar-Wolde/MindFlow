@@ -10,3 +10,11 @@ export interface Task {
   status: string;
   createdAt: string;
 }
+// src/types.ts (add User interface)
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  password?: string;
+  createdAt: string;
+}

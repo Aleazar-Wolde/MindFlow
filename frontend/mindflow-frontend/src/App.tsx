@@ -1,26 +1,90 @@
 // src/App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import MainLayout from './layouts/MainLayout'
-import AuthLayout from './layouts/AuthLayout'
-import Dashboard from './pages/Dashboard';
-import Login from './pages/Login';
-import Register from './pages/Register';
+
+// Only two layouts now:
+import AuthLayout from './layouts/AuthLayout';
+import Layout     from './components/Layout';
+
+// Pages
+import Login      from './pages/Login';
+import Register   from './pages/Register';
+import Dashboard  from './pages/Dashboard';
+import TaskList   from './pages/TaskList';
+import Calendar   from './pages/Calendar';
+import AIPage     from './pages/AIPage';
+import Reflection from './pages/Reflection';
 
 const App: React.FC = () => (
   <Router>
     <Routes>
-      <Route path="/login" element={<AuthLayout><Login /></AuthLayout>} />
-      <Route path="/register" element={<AuthLayout><Register /></AuthLayout>} />
-      <Route path="/" element={<MainLayout><Dashboard /></MainLayout>} />
-      {/* placeholder routes for nav links */}
-      <Route path="/tasks" element={<MainLayout><Dashboard /></MainLayout>} />
-      <Route path="/calendar" element={<MainLayout><Dashboard /></MainLayout>} />
-      <Route path="/ai" element={<MainLayout><Dashboard /></MainLayout>} />
-      <Route path="/reflection" element={<MainLayout><Dashboard /></MainLayout>} />
-      <Route path="*" element={<Navigate to="/" />} />
+
+      {/* Authentication routes use only AuthLayout */}
+      <Route 
+        path="/login" 
+        element={
+          <AuthLayout>
+            <Login />
+          </AuthLayout>
+        } 
+      />
+      <Route 
+        path="/register" 
+        element={
+          <AuthLayout>
+            <Register />
+          </AuthLayout>
+        } 
+      />
+
+      {/* Everything else uses only your single Layout (sidebar + content) */}
+      <Route 
+        path="/"
+        element={
+          <Layout>
+            <Dashboard />
+          </Layout>
+        }
+      />
+      <Route 
+        path="/tasks"
+        element={
+          <Layout>
+            <TaskList />
+          </Layout>
+        }
+      />
+      <Route 
+        path="/calendar"
+        element={
+          <Layout>
+            <Calendar />
+          </Layout>
+        }
+      />
+      <Route 
+        path="/ai"
+        element={
+          <Layout>
+            <AIPage />
+          </Layout>
+        }
+      />
+      <Route 
+        path="/reflection"
+        element={
+          <Layout>
+            <Reflection />
+          </Layout>
+        }
+      />
+
+      {/* Fallback */}
+      <Route path="*" element={<Navigate to="/" replace />} />
+
     </Routes>
   </Router>
 );
 
 export default App;
+

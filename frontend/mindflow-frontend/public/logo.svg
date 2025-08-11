@@ -1,0 +1,15 @@
+<!-- public/logo.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 120" role="img" aria-label="MindFlow">
+  <title>MindFlow</title>
+  <text
+    x="0"
+    y="86"
+    font-family="ui-serif, Georgia, 'Times New Roman', Times, serif"
+    font-size="86"
+    font-weight="700"
+    letter-spacing="0.5"
+    fill="currentColor"
+  >
+    Mindflow
+  </text>
+</svg>

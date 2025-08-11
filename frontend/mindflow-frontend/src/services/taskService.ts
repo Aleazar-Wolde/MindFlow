@@ -8,7 +8,7 @@ export const api = axios.create({
 });
 
 // CRUD API calls
-export const getTasks = () => api.get<Task[]>('/tasks');
+export const getTasks = (p0: (ts: any) => any[]) => api.get<Task[]>('/tasks');
 export const getTaskById = (id: string) => api.get<Task>(`/tasks/${id}`);
 export const createTask = (task: Partial<Task>) => api.post<Task>('/tasks', task);
 export const updateTask = (id: string, task: Partial<Task>) => api.put<Task>(`/tasks/${id}`, task);

@@ -1,6 +1,9 @@
-// src/pages/Register.tsx
+
+// src/pages/Register.tsx  (update to call backend)
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { createUser } from '../services/userService';
+import type { User } from '../types';
 
 const Register: React.FC = () => {
   const navigate = useNavigate();
@@ -8,22 +11,29 @@ const Register: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirm, setConfirm] = useState('');
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (password !== confirm) {
-      alert("Passwords don't match");
+      setError("Passwords don't match");
       return;
     }
-    // TODO: call backend API
-    console.log({ name, email, password });
-    navigate('/login');
+    try {
+      const newUser: Partial<User> = { name, email, password };
+      await createUser(newUser);
+      navigate('/login');
+    } catch (err: any) {
+      setError(err.response?.data?.message || err.message);
+    }
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-50">
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded-2xl shadow-md w-full max-w-sm">
         <h2 className="text-2xl font-semibold mb-4 text-center">Register</h2>
+        {error && <p className="text-red-500 mb-4">{error}</p>}
+        {/* Name, Email, Password fields unchanged */}
         <label className="block mb-2">
           <span className="text-gray-700">Name</span>
           <input
@@ -76,4 +86,3 @@ const Register: React.FC = () => {
 };
 
 export default Register;
-
