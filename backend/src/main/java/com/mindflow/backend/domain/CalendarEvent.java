@@ -8,7 +8,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name="events")
-public class Event {
+public class CalendarEvent {
     @Id
     @GeneratedValue
     private UUID id;
