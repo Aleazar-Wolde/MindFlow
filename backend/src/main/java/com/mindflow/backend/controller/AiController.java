@@ -1,10 +1,9 @@
-// AIController.java
+// AiController.java
 package com.mindflow.backend.controller;
 
 import com.mindflow.backend.domain.Reflection;
 import com.mindflow.backend.repository.ReflectionRepository;
 import com.mindflow.backend.repository.TaskRepository;
-import com.mindflow.backend.service.AIService;
 import com.mindflow.backend.service.AiService;
 import org.springframework.scheduling.config.Task;
 import org.springframework.web.bind.annotation.*;
