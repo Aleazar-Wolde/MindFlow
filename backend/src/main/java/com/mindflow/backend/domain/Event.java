@@ -1,4 +1,5 @@
 package com.mindflow.backend.domain;
 
-public class Events {
+public class Event{
+
 }

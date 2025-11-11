@@ -1,5 +1,6 @@
 package com.mindflow.backend.controller;
 
+import com.mindflow.backend.domain.Event;
 import com.mindflow.backend.repository.EventRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +15,6 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class EventController {
     private final EventRepository repo;
-
 
     record EventDTO(UUID id, String title, Instant startAt, Instant endAt, String description, String source){}
 
